@@ -22,3 +22,12 @@ Next, I created `speed.py` to compare the performance between the pure Python lo
 
 ### Conclusion
 NumPy vectorization is dramatically faster because it processes the entire array of atoms at once using optimized C code, whereas the Python loop iterates over every single surviving atom manually.
+## PW1 --- Lab B
+
+In this lab I worked with some observed decay data and used Python to plot it.
+
+First, I loaded the data from `decay_observed.csv` using NumPy. Then I used the exponential decay formula to calculate the analytical values and compared them with the observed data using Matplotlib.
+
+From the plot, the observed data generally follows the exponential decay trend, but the points are not exactly the same as the analytical curve, which is expected for observed data.
+
+I also used Snakemake to make a simple pipeline. It takes `decay_observed.csv` as the input and runs `plot.py` to create `figure.png`. This also makes it possible to check if the output needs to be generated again or is already up to date.
